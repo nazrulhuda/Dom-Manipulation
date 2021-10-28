@@ -1,78 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-body {
-    background: #06BDC1;
-    background: -webkit-radial-gradient(center, #06BDC1, #68469F);
-    background: -moz-radial-gradient(center, #06BDC1, #68469F);
-    background: radial-gradient(ellipse at center, #06BDC1, #68469F);
-}
-
-.container {
-    width: 1280px;
-    margin: auto;
-}
-
-.first {
-    margin-left: 100rem;
-    display: flow-root;
-    width: max-content;
-}
-
-.quotes-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-}
-
-.inner-quotes-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 900px;
-    text-align: center;
-    min-height: 400px;
-    padding: 0 25px;
-    color: gray;
-    border-radius: 10px;
-    background-color: #F4EDEA;
-    border: 10px solid #06BDC1;
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
-}
-
-.inner-quotes-container p {
-    font-size: 1.5rem;
-    color: black;
-}
-
-.inner-quotes-container h3 {
-    font-size: 2rem;
-    color: black;
-    font-family: 'Dancing Script', cursive;
-}
-
-.quote-btn {
-    padding-top: 25px;
-}
-
-@media(max-width:1280px) {
-    .container {
-        width: 95%;
-    }
-}
-
-@media(max-width:900px) {
-    .inner-quotes-container {
-        width: 100%;
-    }
-}
-
-@media(max-width:480px) {
-    .inner-quotes-container p {
-        font-size: 1.2rem;
-    }
-    .inner-quotes-container h3 {
-        font-size: 1.5rem;
-    }
-}
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        body {
+            min-height: 190rem;
+            ;
+            background: #06BDC1;
+            background: -webkit-radial-gradient(center, #06BDC1, #68469F);
+            background: -moz-radial-gradient(center, #06BDC1, #68469F);
+            background: radial-gradient(ellipse at center, #06BDC1, #68469F);
+        }
+        
+        .container {
+            width: 1280px;
+            margin: auto;
+        }
+        
+        .first {
+            margin-left: 100rem;
+            display: flow-root;
+            width: max-content;
+        }
+        
+        .quotes-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .inner-quotes-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 900px;
+            text-align: center;
+            min-height: 400px;
+            padding: 0 25px;
+            color: gray;
+            border-radius: 10px;
+            background-color: #F4EDEA;
+            border: 10px solid #06BDC1;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
+        }
+        
+        .inner-quotes-container p {
+            font-size: 1.5rem;
+            color: black;
+        }
+        
+        .inner-quotes-container h3 {
+            font-size: 2rem;
+            color: black;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .quote-btn {
+            padding-top: 25px;
+        }
+        
+        @media(max-width:1280px) {
+            .container {
+                width: 95%;
+            }
+        }
+        
+        @media(max-width:900px) {
+            .inner-quotes-container {
+                width: 100%;
+            }
+        }
+        
+        @media(max-width:480px) {
+            .inner-quotes-container p {
+                font-size: 1.2rem;
+            }
+            .inner-quotes-container h3 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .converter-body {
+            margin-top: 30rem;
+            width: 600px;
+            height: 150px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 2px 1px #cacaca;
+        }
+        
+        .converter-title {
+            text-align: center;
+            margin: 13px 0px;
+            font-size: 40px;
+        }
+        
+        input {
+            height: 25px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        
+        #input {
+            margin-left: 25px;
+        }
+        
+        #inputType,
+        #resultType {
+            width: 164.66px;
+            margin-left: 25px;
+            color: red;
+            border: 1px solid black;
+        }
+        
+        #resultType {
+            margin-left: 59.5px;
+        }
+        
+        .lol {
+            padding-top: 3%;
+            margin-left: 20rem;
+            text-align: center;
+            width: 80rem;
+            color: white;
+            border: 2px solid black;
+            margin-top: 15rem;
+            border: 10px solid #06BDC1;
+        }
+        
+        .ona {
+            margin-bottom: 2rem;
+            color: white;
+            background-color: dimgray;
+        }
+        
+        .lol .ji {
+            margin-bottom: 2rem;
+        }
+        
+        .al {
+            margin-top: 5em;
+            border: 10 px solid black;
+            width: 100rem;
+            margin-left: 30rem;
+        }
+        
+        textarea {
+            width: 700px;
+            height: 500px;
+            margin-left: 37rem;
+            margin-top: 11rem;
+            margin-bottom: 0rem;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
+            border: 10px solid #06BDC1;
+        }
+        
+        .ko {
+            margin-bottom: 22rem;
+            margin-left: 38rem;
+            display: inline-flex;
+            font-family: 'Times New Roman', Times, serif;
+            border: 4px solid #06BDC1;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.9);
+        }

@@ -80,3 +80,130 @@ document.querySelector("#red").addEventListener("click", () => {
 
 
 });
+var input = document.getElementById('input');
+var result = document.getElementById('result');
+var inputType = document.getElementById('inputType');
+var resultType = document.getElementById('resultType');
+var option_from, option_to;
+
+// now add listener
+input.addEventListener("keyup", myResult);
+inputType.addEventListener("change", myResult);
+resultType.addEventListener("change", myResult);
+
+// taking initial value
+option_from = inputType.value;
+option_to = resultType.value;
+
+
+function myResult() {
+
+
+    // when we change the input and output type vale we need to updata the 
+    // option_from and option_to
+
+    option_from = inputType.value;
+    option_to = resultType.value;
+
+
+    // now compare the input and resultType value and add formula
+
+    if (option_from === "Lb" && option_to === "Kg") {
+        //this is meter to kilometer formula 
+        result.value = Number(input.value) * 0.4536;
+
+
+    } else if (option_from === "Lb" && option_to === "Lb") {
+        //this is meter to meter formula 
+        result.value = input.value
+    }
+
+
+
+    if (option_from === "Kg" && option_to === "Lb") {
+        //this is kilometer to meter formula 
+        result.value = Number(input.value) * 2.2046;
+
+    } else if (option_from === "Kg" && option_to === "Kg") {
+        //this is kilometer to kilometer formula 
+        result.value = input.value
+    }
+}
+
+
+function calculate() {
+    var values = document.getElementById('box1').value.split(/,/g);
+    var sum = values.reduce(function(a, b) { return parseInt(a) + parseInt(b); });
+    document.querySelector('#max').innerHTML = values.max();
+    document.querySelector('#min').innerHTML = values.min();
+    document.querySelector('#sum').innerHTML = sum;
+    document.querySelector('#avg').innerHTML = sum / values.length;
+    document.querySelector('#reverse').innerHTML = values.reverse().join(',');
+}
+
+Array.prototype.max = function() {
+    return Math.max.apply(null, this);
+};
+
+Array.prototype.min = function() {
+    return Math.min.apply(null, this);
+};
+
+
+function clearTextArea() {
+    document.textform.textarea.value = '';
+}
+
+function lowerCaseText() {
+
+    var a = document.textform.textarea.value;
+    document.textform.textarea.value = a.toUpperCase();
+}
+
+function powerLifter() {
+
+
+
+
+    var a = document.textform.textarea.value;
+    document.textform.textarea.value = a.split(/\r?\n/).sort().join('\n');
+}
+
+function notPowerLifter() {
+
+
+
+
+    var a = document.textform.textarea.value;
+    document.textform.textarea.value = a.split(/\r?\n/).sort().reverse().join('\n');
+}
+
+function goWin() {
+
+
+
+
+
+    var a = document.textform.textarea.value;
+    document.textform.textarea.value = a.replace(/^(?=\n)$|^\s*|\s*$|\n\n+/gm, "");
+}
+
+function liveLife() {
+    let i = 1;
+    var a = document.textform.textarea.value;
+    document.textform.textarea.value = a.replace(/^/gm, () => `${i++}.`);
+}
+
+function nazrulBest() {
+
+
+
+
+    const lines = document.textform.textarea.value.split(/\r?\n/);
+    for (let i = lines.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [lines[i], lines[j]] = [lines[j], lines[i]];
+    }
+
+    document.textform.textarea.value = lines.join('\n');
+}
